@@ -25,30 +25,30 @@ This will run CNN, RNN, Bi-RNN, GRU, Bi-GRU, LSTM and Bi-LSTM serially in a GPU.
 
 #### Convolutional Neural Network (`cnn.lua`)
 
-* `num_feat_maps`: Number of feature maps after 1st convolution
-* `kernels`: Kernel sizes of convolutions, table format.
-* `dropout_p`: p for dropout
+* `num_feat_maps`: number of feature maps after 1st convolution
+* `kernels`: kernel sizes of convolutions, table format. (ex: 3,4,5)
+* `dropout_p`: dropout for regularization
 * `L2s`: L2 normalize weights
-* `optim_method`: Which gradient descent algorithm to choose? adadelta or adam 
+* `optim_method`: which gradient descent algorithm to choose? adadelta or adam 
 
 #### Recurrent Neural Network (`*rnn.lua`)
 
-* `layers`: Size of each hidden layer in RNN (ex: for 3-layer net, give it as {150,150,150})
-* `rnn_type`: Which variant of RNN to use? RNN or GRU or LSTM
-* `seq_length`: Number of timessteps to unroll for
-* `optim_method`: Which gradient descent algorithm to choose? adadelta or adam or adagrad
-* `learning_rate`: Learning rate to be given to the optmizer.
+* `layers`: size of each hidden layer in RNN (ex: for 3-layer net, give it as {150,150,150})
+* `rnn_type`: which variant of RNN to use? RNN or GRU or LSTM
+* `seq_length`: number of timessteps to unroll for
+* `optim_method`: which gradient descent algorithm to choose? adadelta or adam or adagrad
+* `learning_rate`: learning rate to be given to the optmizer.
 
 #### Miscellaneous `*.lua`
 
-* `data`: Path to the data.
-* `seed`: Change the random seed for random numbers in torch - use that option to train alternate models for ensemble
-* `glove_dir`: Directory for accesssing the pre-trained twitter-specific glove word embeddings. You can download them [here](http://nlp.stanford.edu/projects/glove/)
-* `pre_train`: Should we initialize word embeddings with pre-trained vectors?
-* `dim`: Dimensionality of word embeddings.
-* `min_freq`: Words that occur less than <int> times will not be taken for training. They are substituted with special token.
-* `num_epochs`: Number of full passes through the training data
-* `bsize`: Mini-Batch size
+* `data`: path to the data.
+* `seed`: change the random seed for random numbers in torch - use that option to train alternate models for ensemble
+* `glove_dir`: directory for accesssing the pre-trained twitter-specific glove word embeddings. You can download them [here](http://nlp.stanford.edu/projects/glove/)
+* `pre_train`: should we initialize word embeddings with pre-trained vectors?
+* `dim`: dimensionality of word embeddings.
+* `min_freq`: words that occur less than <int> times will not be taken for training. They are substituted with special token.
+* `num_epochs`: number of full passes through the training data
+* `bsize`: mini-Batch size
 
 
 #### Torch Dependencies
