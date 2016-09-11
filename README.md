@@ -1,6 +1,6 @@
 ## Tweet Classification using RNN and CNN
 
-[Torch](http://torch.ch) implementation of a tweet classifier with GPUs. It allows training using a deep CNN and RNN models. We also provide option to choose different RNNs such as GRU, LSTM and their bi-directional variants.
+[Torch](http://torch.ch) implementation of a tweet classifier with GPUs. It allows training using a deep CNN and RNN models. We also provide option to choose different activation units of RNNs such as GRU, LSTM and their bi-directional variants.
 
 The CNN model is from
 [Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181),
@@ -10,7 +10,7 @@ This project is maintained by [Ganesh J](https://researchweb.iiit.ac.in/~ganesh.
 
 ### Quickstart
 
-We will be working with sample data from [Sentiment140](http://help.sentiment140.com/for-students/). The data has 6000, 600 and 359 training, validation and test tweets respectively along with their labels in tab-separated format.
+We will be working with a sample data from [Sentiment140](http://help.sentiment140.com/for-students/). The data has 6000, 600 and 359 training, validation and test tweets respectively along with their labels in a tab-separated format.
 
 Run all the models at one shot
 
@@ -18,7 +18,7 @@ Run all the models at one shot
 bash run_all.sh
 ```
 
-This will run CNN, RNN, Bi-RNN, GRU, Bi-GRU, LSTM and Bi-LSTM serially in a GPU. The default settings for CNNs are taken from the original paper while for RNNs they are taken from [TreeLSTM](https://github.com/stanfordnlp/treelstm).
+This will run CNN, RNN, Bi-RNN, GRU, Bi-GRU, LSTM and Bi-LSTM serially in a GPU. The default settings for CNNs are taken from the original paper while RNNs settings are leveraged from [TreeLSTM](https://github.com/stanfordnlp/treelstm).
 
 
 ### Training options
