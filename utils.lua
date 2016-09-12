@@ -130,6 +130,12 @@ function utils.init_word_weights(params, lookup, file)
 	print('initializing the pre-trained embeddings...')
 	local start = sys.clock()
 	local ic = 0
+	local start = 0
+	if params.rnn_type ~= nil then 
+		-- since rnn uses lookuptablemaskzero table, 
+		-- the first index in weight matrix corresponds to the zero padding
+		start = 1 
+	end 
 	for line in io.lines(file) do
 		local content = stringx.split(line)
 		local word = content[1]
@@ -138,11 +144,11 @@ function utils.init_word_weights(params, lookup, file)
 			for i = 2, #content do
 				tensor[i - 1] = tonumber(content[i])
 			end
-			lookup.weight[params.word2index[word]] = tensor
+			lookup.weight[start + params.word2index[word]] = tensor
 			ic = ic + 1
 		end
 	end
-	print(string.format("%d out of %d words initialized.",ic, #params.index2word))
+	print(string.format("%d out of %d words initialized.", ic, #params.index2word))
 	print(string.format("Done in %.2f seconds.", sys.clock() - start))
 end
 
