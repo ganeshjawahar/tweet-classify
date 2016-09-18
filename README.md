@@ -1,6 +1,6 @@
 ## Tweet Classification using RNN and CNN
 
-[Torch](http://torch.ch) implementation of a tweet classifier with GPUs. It allows training using a deep CNN and RNN models. We also provide option to choose different activation units of RNNs such as GRU, LSTM and their bi-directional variants.
+[Torch](http://torch.ch) implementation of a tweet classifier with GPUs. It allows training using a deep CNN and RNN models. We also provide option to choose different activation functions of RNNs such as GRU, LSTM and their bi-directional variants.
 
 The CNN model is from
 [Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181),
